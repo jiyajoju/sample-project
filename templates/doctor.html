@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>doctor1</h1>
+{% for d in doctor1 %}
+<h1>{{ d.doc_name }}</h1>
+<p>{{ d.doc_specialisation }}</p>
+<h4>{{ d.dept_name }}</h4>
+<img src="{{ d.dept_image.url }}" width="250" height="250">
+{% endfor %}
+{% endblock content %}

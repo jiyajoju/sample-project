@@ -1,0 +1,30 @@
+
+{% load static %}
+<!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static '/css/style.css' %}"/>
+    </head>
+        <body style="background-color:pink">
+            <h1>hello</h1>
+            <a href="">home</a>
+            <a href="about">about</a>
+            <h1>name is {{name}} </h1>
+            <h1>age is {{age}} </h1>
+            <h1>place is {{place}} </h1>
+            {% if age > 18 %}
+            <h2>eligible</h2>
+            {% elif age > 25 %}
+            <h2>well settled</h2>
+            {% else %}
+            <h2>not eligible</h2>
+            {% endif %}
+            {% for i in 'django' %}
+            <h4>{{i}}</h4>
+            {% endfor %}
+
+        </body>
+        </html>
